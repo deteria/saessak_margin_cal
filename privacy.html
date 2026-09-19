@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>새싹 마진 계산기 개인정보처리방침</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --line: #e5e5ea;
+    --accent: #2e7d4f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181a; --fg: #ececed; --muted: #9b9ba1; --line: #303136; --accent: #5cc48a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181a; --fg: #ececed; --muted: #9b9ba1; --line: #303136; --accent: #5cc48a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+    word-break: keep-all;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 16px 96px; }
+  h1 { font-size: 1.7rem; line-height: 1.35; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .updated { color: var(--muted); font-size: 0.9rem; margin: 0 0 40px; }
+  h2 { font-size: 1.1rem; margin: 40px 0 12px; padding-top: 24px; border-top: 1px solid var(--line); letter-spacing: -0.01em; }
+  h2:first-of-type { border-top: 0; padding-top: 0; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 1.25em; }
+  strong { color: var(--accent); font-weight: 600; }
+  .lead { font-size: 1.05rem; padding: 16px 20px; border-left: 3px solid var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); border-radius: 0 8px 8px 0; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: color-mix(in srgb, var(--fg) 7%, transparent); padding: 1px 5px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>새싹 마진 계산기 — 개인정보처리방침</h1>
+  <p class="updated">최종 수정일 2026년 9월 19일 · 확장 버전 1.0.0</p>
+
+  <p class="lead"><strong>이 확장은 어떤 개인정보도 수집하지 않습니다.</strong> 개발자가 운영하는 서버가 없으며, 모든 계산은 사용자의 브라우저 안에서 이루어집니다. 사용자의 기기를 벗어나 전송되는 데이터는 없습니다.</p>
+
+  <h2>1. 수집하는 정보</h2>
+  <p>없습니다. 이 확장은 개인 식별 정보, 인증 정보, 위치, 웹 방문 기록, 사용자 활동 등 어떤 항목도 수집·기록·전송하지 않습니다. 분석 도구, 광고, 추적 스크립트, 오류 보고 서비스를 일절 포함하지 않습니다.</p>
+
+  <h2>2. 브라우저에 저장되는 것</h2>
+  <p>기능 동작을 위해 다음 항목만 사용자 브라우저의 로컬 저장소에 보관됩니다. 개발자는 이 값에 접근할 수 없습니다.</p>
+  <ul>
+    <li><strong>카테고리별 수수료율 캐시</strong> — 같은 조회를 반복하지 않기 위해 최대 7일간 보관되며 이후 자동으로 폐기됩니다.</li>
+    <li><strong>화면 테마 설정</strong> — 라이트 / 다크 선택값.</li>
+    <li><strong>세션 상태</strong> — 입력한 원가, 불러온 상품, 계산 기록. <code>chrome.storage.session</code> 에만 있으며 <strong>브라우저를 닫으면 삭제됩니다.</strong></li>
+  </ul>
+  <p>확장을 삭제하면 위 항목은 모두 함께 제거됩니다.</p>
+
+  <h2>3. 접근하는 웹사이트</h2>
+  <p>확장은 아래 두 도메인에서만 동작하도록 권한이 제한되어 있습니다.</p>
+  <ul>
+    <li><code>www.coupang.com</code> — 사용자가 보고 있거나 주소를 입력한 상품의 이름·카테고리·가격을 읽습니다.</li>
+    <li><code>wing.coupang.com</code> — 해당 카테고리의 판매수수료율, 사이즈 유형, 입출고배송비를 조회합니다.</li>
+  </ul>
+  <p>이 조회는 <strong>사용자가 이미 브라우저에 로그인해 둔 세션</strong>으로 사용자의 브라우저에서 직접 이루어집니다. 확장은 아이디·비밀번호·쿠키·토큰을 읽거나 저장하거나 다른 곳으로 보내지 않습니다. 조회 결과는 화면에 표시되고 위 2항의 캐시에만 쓰입니다.</p>
+
+  <h2>4. 제3자 제공 및 판매</h2>
+  <p>수집하는 데이터가 없으므로 제3자에게 제공하거나 판매하는 데이터도 없습니다. 어떤 데이터도 신용도 평가나 대출 심사 목적으로 사용되지 않습니다.</p>
+
+  <h2>5. 원격 코드</h2>
+  <p>사용하지 않습니다. 실행되는 모든 코드는 크롬 웹스토어에서 심사된 확장 패키지 안에 포함되어 있습니다.</p>
+
+  <h2>6. 아동의 개인정보</h2>
+  <p>이 확장은 온라인 판매자를 위한 업무용 도구이며 아동을 대상으로 하지 않습니다. 수집하는 정보가 없으므로 아동의 정보 역시 수집되지 않습니다.</p>
+
+  <h2>7. 방침 변경</h2>
+  <p>내용이 바뀌면 이 페이지를 수정하고 상단의 최종 수정일을 갱신합니다. 데이터 처리 방식이 실질적으로 달라지는 변경은 확장 업데이트와 함께 안내합니다.</p>
+
+  <h2>8. 문의</h2>
+  <p>개인정보 처리에 관한 문의는 <a href="mailto:deteriakr@gmail.com">deteriakr@gmail.com</a> 으로 보내 주세요.</p>
+
+  <footer>
+    이 확장은 쿠팡 주식회사와 제휴·후원·제작 관계가 없는 비공식 도구입니다. 모든 상표는 각 소유자의 재산입니다.
+  </footer>
+</main>
+</body>
+</html>
